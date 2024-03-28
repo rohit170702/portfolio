@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    <div id="my code" class="my_video">
+      <video width="400" height="300" controls>
+        <source src="play.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
@@ -22,7 +28,9 @@
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Laboratory</div>
       </div>
+      
     </div>
+    
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -59,9 +67,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/VirtualLab.loader.js";
       var config = {
-        dataUrl: buildUrl + "/VirtualLab.data.gz",
-        frameworkUrl: buildUrl + "/VirtualLab.framework.js.gz",
-        codeUrl: buildUrl + "/VirtualLab.wasm.gz",
+        dataUrl: buildUrl + "/VirtualLab.data",
+        frameworkUrl: buildUrl + "/VirtualLab.framework.js",
+        codeUrl: buildUrl + "/VirtualLab.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Laboratory",
